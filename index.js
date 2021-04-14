@@ -3746,13 +3746,13 @@ break
                     anu = await getBuffer(`https://api.xteam.xyz/attp?file&text=${txt}`)
 					client.sendMessage( from, anu, sticker, {quoted:mek})
 					break
-					case 'nulis':
-case 'tulis':
-teks = body.slice(6)
-i = await fetchJson(`https://restapi-exe.herokuapp.com/api/nulis?text=${teks}`)
-x = await getBuffer(i.results)
-client.sendMessage(from, x, image, {quoted: mek})
-break
+				case 'nulis':
+                case 'tulis':
+                    teks = body.slice(6)
+                    i = await fetchJson(`https://restapi-exe.herokuapp.com/api/nulis?text=${teks}`)
+                    x = await getBuffer(i.results)
+                    client.sendMessage(from, x, image, {quoted: mek})
+                    break
 				case 'url2img':
 					tipelist = ['desktop','tablet','mobile']
 					if (args.length < 1) return reply('Que tipo é??')
